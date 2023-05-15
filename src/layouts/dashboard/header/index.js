@@ -2,15 +2,22 @@ import PropTypes from 'prop-types';
 // @mui
 import { styled } from '@mui/material/styles';
 import { Box, Stack, AppBar, Toolbar, IconButton } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import Typography from '@mui/material/Typography';
+
+
 // utils
+
 import { bgBlur } from '../../../utils/cssStyles';
 // components
 import Iconify from '../../../components/iconify';
+
 //
-import Searchbar from './Searchbar';
-import AccountPopover from './AccountPopover';
-import LanguagePopover from './LanguagePopover';
-import NotificationsPopover from './NotificationsPopover';
+// import Searchbar from './Searchbar';
+// import AccountPopover from './AccountPopover';
+// import LanguagePopover from './LanguagePopover';
+// import NotificationsPopover from './NotificationsPopover';
+import DropDown from './DropDown';
 
 // ----------------------------------------------------------------------
 
@@ -29,11 +36,9 @@ const StyledRoot = styled(AppBar)(({ theme }) => ({
 }));
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-  minHeight: HEADER_MOBILE,
-  [theme.breakpoints.up('lg')]: {
-    minHeight: HEADER_DESKTOP,
-    padding: theme.spacing(0, 5),
-  },
+  backgroundColor: "#0538af", // change background color here
+  color: "white", // change text color here
+
 }));
 
 // ----------------------------------------------------------------------
@@ -53,11 +58,20 @@ export default function Header({ onOpenNav }) {
             color: 'text.primary',
             display: { lg: 'none' },
           }}
-        >
+        >   <MenuIcon />
           <Iconify icon="eva:menu-2-fill" />
         </IconButton>
 
-        <Searchbar />
+        {/* <Searchbar /> */}
+        <Typography
+              component="h1"
+              variant="h5"
+              color="White"
+              noWrap
+              sx={{ flexGrow: 1 }}
+            >
+              Dokimasia
+            </Typography>
         <Box sx={{ flexGrow: 1 }} />
 
         <Stack
@@ -68,9 +82,10 @@ export default function Header({ onOpenNav }) {
             sm: 1,
           }}
         >
-          <LanguagePopover />
-          <NotificationsPopover />
-          <AccountPopover />
+          <DropDown/>
+          {/* <LanguagePopover /> */}
+          {/* <NotificationsPopover /> */}
+          {/* <AccountPopover /> */}
         </Stack>
       </StyledToolbar>
     </StyledRoot>

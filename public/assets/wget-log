@@ -1,0 +1,21 @@
+--2023-05-14 14:27:51--  http://cf-logo.png/
+Resolving cf-logo.png (cf-logo.png)... failed: Name or service not known.
+wget: unable to resolve host address ‘cf-logo.png’
+--2023-05-14 14:27:51--  https://www.google.com/imgres?imgurl=https%3A%2F%2Fseeklogo.com%2Fimages%2FC%2Fcardano-ada-logo-4B6BADDB43-seeklogo.com.png
+Resolving www.google.com (www.google.com)... 2a00:1450:400f:801::2004, 216.58.207.228
+Connecting to www.google.com (www.google.com)|2a00:1450:400f:801::2004|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.google.com/imghp [following]
+--2023-05-14 14:27:51--  https://www.google.com/imghp
+Reusing existing connection to [www.google.com]:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘imgres?imgurl=https:%2F%2Fseeklogo.com%2Fimages%2FC%2Fcardano-ada-logo-4B6BADDB43-seeklogo.com.png’
+
+                       imgres?imgurl=https:%2F     [<=>                                                                                                ]       0  --.-KB/s               imgres?imgurl=https:%2F%2Fseeklogo.com%2Fimage     [ <=>                                                                                               ]  16.49K  --.-KB/s    in 0.006s  
+
+2023-05-14 14:27:51 (2.77 MB/s) - ‘imgres?imgurl=https:%2F%2Fseeklogo.com%2Fimages%2FC%2Fcardano-ada-logo-4B6BADDB43-seeklogo.com.png’ saved [16886]
+
+FINISHED --2023-05-14 14:27:51--
+Total wall clock time: 0.3s
+Downloaded: 1 files, 16K in 0.006s (2.77 MB/s)

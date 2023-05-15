@@ -1,9 +1,15 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { React, useEffect,useState } from 'react';
 import { useLocation } from 'react-router-dom';
 // @mui
 import { styled, alpha } from '@mui/material/styles';
 import { Box, Link, Button, Drawer, Typography, Avatar, Stack } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import Divider from '@mui/material/Divider';
+
+
+
 // mock
 import account from '../../../_mock/account';
 // hooks
@@ -39,6 +45,7 @@ export default function Nav({ openNav, onCloseNav }) {
 
   const isDesktop = useResponsive('up', 'lg');
 
+
   useEffect(() => {
     if (openNav) {
       onCloseNav();
@@ -53,11 +60,9 @@ export default function Nav({ openNav, onCloseNav }) {
         '& .simplebar-content': { height: 1, display: 'flex', flexDirection: 'column' },
       }}
     >
-      <Box sx={{ px: 2.5, py: 3, display: 'inline-flex' }}>
-        <Logo />
-      </Box>
 
-      <Box sx={{ mb: 5, mx: 2.5 }}>
+
+      {/* <Box sx={{ mb: 5, mx: 2.5 }}>
         <Link underline="none">
           <StyledAccount>
             <Avatar src={account.photoURL} alt="photoURL" />
@@ -73,7 +78,9 @@ export default function Nav({ openNav, onCloseNav }) {
             </Box>
           </StyledAccount>
         </Link>
-      </Box>
+      </Box> */}
+   <Box sx={{ mb: 7, mx: 2.5 }}/>
+    
 
       <NavSection data={navConfig} />
 

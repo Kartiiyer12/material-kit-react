@@ -1,4 +1,8 @@
 // component
+import SettingsInputComponentIcon from '@mui/icons-material/SettingsInputComponent';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import ArticleIcon from '@mui/icons-material/Article';
 import SvgColor from '../../../components/svg-color';
 
 // ----------------------------------------------------------------------
@@ -7,14 +11,14 @@ const icon = (name) => <SvgColor src={`/assets/icons/navbar/${name}.svg`} sx={{ 
 
 const navConfig = [
   {
-    title: 'dashboard',
+    title: 'component details',
     path: '/dashboard/app',
-    icon: icon('ic_analytics'),
+    icon: <SettingsInputComponentIcon/>,
   },
   {
-    title: 'user',
+    title: 'Error Logs',
     path: '/dashboard/user',
-    icon: icon('ic_user'),
+    icon: <ErrorOutlineIcon/>,
   },
   {
     title: 'product',
